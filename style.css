@@ -1,0 +1,48 @@
+:root {
+  --primary: chocolate;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: var(--primary);
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1,1,1,0.8);
+  border-bottom: 1px solid #899;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  font-style: italic;
+}
+span {
+  color: orange;
+}
+.span1 {
+  color: yellowgreen;
+}
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 2.3rem;
+  margin: 0 1rem;
+}
