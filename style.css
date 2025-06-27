@@ -1,48 +1,112 @@
-:root {
-  --primary: chocolate;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-  font-family: 'Poppins', sans-serif;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-}
-body {
-  font-family: 'Poppins', sans-serif;
+  #teks-c {
+  margin-top: 20px;
+  font-size: 20px;
+  width: cover;
+  height: cover;
+  background-color: silver;
   color: white;
-  background-color: var(--primary);
+  font-weight: 999;
 }
-
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 7%;
-  background-color: rgba(1,1,1,0.8);
-  border-bottom: 1px solid #899;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
-.navbar .navbar-logo {
-  font-size: 2rem;
+.teks-w, #teks-w {
+  margin-top: 100px;
+  font-size: 20px;
+  width: cover;
+  height: cover;
+  background-color: silver;
   color: white;
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 999;
 }
-span {
+.navbar-brand {
+  font-weight: 999;
+}
+.btn-mythic {
+  display: inline-block;
+  background-color: blue; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  padding: 18px 30px; /* Ruang dalam tombol */
+  text-align: center;
+  text-decoration: none; /* Hilangkan garis bawah */
+  border-radius: 5px; /* Lengkungan sudut */
+  font-weight: 999; /* Buat teks lebih tebal */
+  border: none; /* Hilangkan border */
+}
+
+.btn-group-mythic:hover {
+  background-color: darkgreen; /* Warna saat hover */
+}
+.pre {
   color: orange;
 }
-.span1 {
-  color: yellowgreen;
+.tels {
+  font-weight: 999;
+  color: black;
+  background-color: ;
+    margin-top: 100px; /* Menambahkan jarak ke elemen di bawahnya */
 }
-.navbar .navbar-nav a {
-  color: white;
-  display: inline-block;
-  font-size: 2.3rem;
-  margin: 0 1rem;
+
+form, button{
+  background-color: ;
+    margin-top: 10px; /* Memberi jarak antara tombol dan form */
 }
+.text1, .text2 {
+    margin-bottom: 7px; /* Jarak antar kolom */
+}
+    
+footer {
+  margin-top: 100px;
+    background-color: #1e2a38;
+    color: white;
+    padding: 30px 20;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 18px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 5px;
+    font-size: 4px;
+}
+
+.footer-section h3 {
+    font-size: 5px; /* Perkecil ukuran judul */
+    margin-bottom: 2px; /* Kurangi jarak bawah */
+}
+
+.footer-section ul, p {
+    font-size: 5px; /* Perkecil ukuran teks */
+    margin: 5px 0; /* Kurangi jarak antar elemen */
+}
+.video-1 {
+  margin-top: 50px;
+  font-weight: bold;
+}
+body {
+    background-color: white; /* Ubah warna sesuai keinginan */
+    color: none; /* Warna teks */
