@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kalkulator sederhana</title>
+  <style type="text/css" media="all">
+body {
+  background-color: black;
+}
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* biar penuh */
+  z-index: -1; /* di belakang */
+}
+p {
+  color:white;
+  font-size: 0.4rem;
+}
+    #display {
+      background:transparent ;
+      color:white;
+      font-weight: bold;
+      width:20.9rem;
+      height: 5rem;
+      box-sizing:border-box;
+      font-size:4rem;
+      border: none;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .calculator {
+      display: flex;
+      flex-direction: column;
+      gap: 4.5rem;
+      height:75%;
+      width:75%;
+      padding-left: 0.3rem;
+      
+    }
+    button {
+      font-size: 2rem;
+  background: transparent; /* transparan */
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+      width:5rem;
+      height:6rem;
+      font-weight:bold;
+      border:0.1px solid #42445A;
+    }
+    .num {
+      background: transparent; /* transparan */
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);    }
+    button:hover {
+     transform:scale(1.05);
+     transition: 0.1s;
+  box-shadow: 0 0 30px #00aaff
+              
+    }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3rem; /* ini yang bikin jarak */
+}
+.img-button img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  transition: 0.2s;
+  background:transparent;
+}
+
+.img-button img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+@media (min-width: 720px) and (max-width: 851px) {
+  /* style untuk HP kecil */
+  .calculator {
+  width:20rem;
+  height:100rem;
+    padding-left: 1.2rem;
+    display: flex;
+      flex-direction: column;
+      gap: 10rem;
+  }
+  .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px; /* ini yang bikin jarak */
+}
+    #display {
+      background:transparent ;
+      color:white;
+      font-weight: bold;
+      width:40.6rem;
+      height: 11rem;
+      box-sizing:border-box;
+      font-size:6rem;
+      border: none;
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    button {
+      font-size: 4rem;
+      background:transparent;* transparan */
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+      width:9.8rem;
+      height:12rem;
+      font-weight:bold;
+      border:0.1px solid #42445A;
+    }
+    p {
+  color:white;
+  font-size: 0.7rem;
+}
+.img-button img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 10px;
+  transition: 0.2s;
+  background:transparent;
+}
+}
+@media (min-width: 801px) and (max-width: 1440px) {  
+    .calculator {
+  width: 75%;
+  height: 75%;
+    padding-left: 0rem;
+    display: flex;
+      flex-direction: column;
+      gap: 20.5rem;
+  }
+  .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px; /* ini yang bikin jarak */
+}
+    #display {
+      background:transparent;
+      color:white;
+      font-weight: bold;
+      width: 82.4rem;
+      height: 22rem;
+      box-sizing:border-box;
+      font-size: 9.3rem;
+      border: none;
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    button {
+      font-size: 8rem;
+      background:transparent; /* transparan */
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+      width:20rem;
+      height:23rem;
+      font-weight:bold;
+      border:1.2px solid #42445A;
+    }
+    p {
+  color:white;
+  font-size: 2rem;
+}
+.img-button img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10px;
+  transition: 0.2s;
+  background:transparent;
+}
+}
+@media (min-width:1441px) and (max-width:2900px) {
+  .calculator {
+  width: 75%;
+  height: 75%;
+    padding-left: 4.9rem;
+    display: flex;
+      flex-direction: column;
+      gap: 40rem;
+  }
+  .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem; /* ini yang bikin jarak */
+}
+    #display {
+      background:transparent;
+      color:white;
+      font-weight: bold;
+      width: 169rem;
+      height: 48rem;
+      box-sizing:border-box;
+      font-size: 21rem;
+      border: none;
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    button {
+      font-size: 17rem;
+      background: transparent; /* transparan */
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+      width:40rem;
+      height:45rem;
+      font-weight:bold;
+      border:3.8px solid #42445A;
+    }
+    p {
+  color:white;
+  font-size: 4rem;
+}
+.img-button img {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 10px;
+  transition: 0.2s;
+  background:transparent;
+}
+}
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline class="bg-video">
+  <source src="background12.mp4" type="video/mp4">
+</video>
+  <p>Created By:@Someone</p>
+<div class="calculator">
+  <input type="text" id="display" readonly>
+  <div class="buttons">
+    <button data-action="clear" class="clear">C</button>
+    <button data-action="delete">⌫</button>
+    <button data-value="%">%</button>
+    <button data-value="÷">÷</button>
+
+    <button data-value="7">7</button>
+    <button data-value="8">8</button>
+    <button data-value="9">9</button>
+    <button data-value="×">×</button>
+
+    <button data-value="4">4</button>
+    <button data-value="5">5</button>
+    <button data-value="6">6</button>
+    <button data-value="-">-</button>
+
+    <button data-value="1">1</button>
+    <button data-value="2">2</button>
+    <button data-value="3">3</button>
+    <button data-value="+">+</button>
+
+    <button data-value="0">0</button>
+    <button data-value=".">.</button>
+    <button data-action="equal" class="equal">=</button>
+     <button class="num" data-value=""<a href="https://www.instagram.com/brignover?igsh=MXY4MTU0bWM2Mmhvdg==" class="img-button">
+  <img src="logo.png" alt="logo">
+</a></button>
+     
+  </div>
+</div>
+<script type="text/javascript">
+const display = document.getElementById('display');
+
+let interval;
+let raw = "";
+
+// format ribuan
+function formatNumber(num) {
+  if (!num) return "";
+
+  let parts = num.split(".");
+
+  // format bagian depan (ribuan)
+  parts[0] = parts[0]
+    .replace(/^0+(?=\d)/, "") // hapus nol depan
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+  return parts.join(".");
+}
+
+// tambah input
+function append(value) {
+  // cegah dua titik desimal
+  if (value === "." && raw.includes(".")) return;
+
+  raw += value;
+
+  display.value = formatNumber(raw);
+}
+
+// clear semua
+function clearDisplay() {
+  raw = "";
+  display.value = "";
+}
+
+// hapus 1 karakter
+function deleteLast() {
+  raw = raw.slice(0, -1);
+  display.value = formatNumber(raw);
+}
+
+// hitung hasil
+function calculate() {
+  try {
+    if (raw.trim() === '') {
+      display.value = 'kosong';
+      return;
+    }
+
+    let exp = raw;
+
+    exp = exp.replace(/×/g, "*");
+    exp = exp.replace(/÷/g, "/");
+
+    // persen (contoh: 50%200 = 0.5 * 200)
+    exp = exp.replace(/(\d+\.?\d*)%(\d+\.?\d*)/g, '($1/100)*$2');
+
+    let result = eval(exp);
+
+    raw = String(result);
+    display.value = formatNumber(raw);
+
+  } catch (e) {
+    display.value = 'error';
+  }
+}
+
+// tombol handler
+function handleButton(btn) {
+  const value = btn.dataset.value;
+  const action = btn.dataset.action;
+
+  if (value) append(value);
+  if (action === 'delete') deleteLast();
+  if (action === 'clear') clearDisplay();
+  if (action === 'equal') calculate();
+}
+
+// hold tombol (auto spam delete dll)
+function startHold(btn) {
+  stopHold();
+
+  handleButton(btn);
+
+  let speed = btn.dataset.action === 'delete' ? 100 : 300;
+
+  interval = setInterval(() => {
+    handleButton(btn);
+  }, speed);
+}
+
+function stopHold() {
+  clearInterval(interval);
+}
+
+// event semua tombol
+document.querySelectorAll("button").forEach((btn) => {
+  btn.addEventListener("pointerdown", () => startHold(btn));
+
+  btn.addEventListener("pointerup", stopHold);
+  btn.addEventListener("pointerleave", stopHold);
+  btn.addEventListener("pointercancel", stopHold);
+});
+</script>
+</body>
+</html>
